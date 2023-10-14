@@ -28,6 +28,10 @@
   @apply px-8 py-5 duration-200 rounded-full shadow-xl hover:opacity-80;
 }
 
+.paragraph-item { 
+  @apply max-w-md text-grayishBlue;
+}
+
 body {
   background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
