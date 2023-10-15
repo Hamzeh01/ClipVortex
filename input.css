@@ -28,7 +28,7 @@
   @apply px-8 py-5 duration-200 rounded-full shadow-xl hover:opacity-80;
 }
 
-.paragraph-item { 
+.paragraph-item {
   @apply max-w-md text-grayishBlue;
 }
 
@@ -42,4 +42,11 @@ body {
   body {
     background-image: url("../images/bg-header-mobile.png");
   }
+}
+
+/* smooth scrolling with customization */
+/* Apply smooth scroll to all anchor links */
+html {
+  scroll-behavior: smooth;
+  transition: 0.8s ease-in-out;
 }
