@@ -14,7 +14,7 @@ ClipVortex is a simple website template for a clipboard manager. It provides a u
 
 ## Live Demo
 
-Try ClipVortex right now! Play with the website template in your web browser by following this [Live Demo Link](https://Hamzeh01.github.io/clipvortex/).
+Try ClipVortex right now! Play with the website template in your web browser by following this [Live Demo Link](https://hamzeh01.github.io/ClipVortex/).
 
 ## Features
 
@@ -57,12 +57,10 @@ You can customize this template in various ways:
 
 3. **Functionality**: Extend the functionality using JavaScript or integrate with back-end services as needed.
 
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 Feel free to explore and customize the ClipVortex template to create your own clipboard manager website. If you have any questions or need further assistance, please don't hesitate to [open an issue](https://github.com/Hamzeh01/clipvortex/issues).
-
