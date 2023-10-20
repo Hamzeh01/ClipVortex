@@ -1,108 +1,496 @@
-<!-- component -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Animated Accordion</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script
-      src="https://kit.fontawesome.com/4a314d7cd5.js"
-      crossorigin="anonymous"
-    ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      * {
-        font-family: "Poppins", sans-serif;
-      }
-      @layer components {
-        .item {
-          @apply w-full sm:w-96 text-xs sm:text-sm flex items-center gap-x-3 flex-wrap select-none;
-        }
-        .content {
-          @apply peer-checked:max-h-max max-h-0 basis-full peer-checked:border-y-[1px] border-blue-300 peer-checked:p-3 overflow-hidden transition-all select-text;
-        }
-      }
-    </style>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body
-    class="grid h-screen place-content-center bg-gradient-to-bl from-cyan-200 via-sky-300 to-blue-400"
-  >
-    <ul class="text-white shadow-2xl">
-      <!-- single Accordion -->
-      <li class="bg-indigo-500 item">
-        <!-- wrap is important here -->
-        <input type="checkbox" id="faq1" class="appearance-none peer" />
-        <i class="inline fa-solid fa-chevron-right peer-checked:hidden"></i>
-        <i class="hidden fa-solid fa-chevron-down peer-checked:inline"></i>
-        <label for="faq1" class="py-4 cursor-pointer grow">
-          <!-- note: grow is used to fill all remaining space of the article -->
-          <p>What is your name?</p></label
-        >
-        <!-- note: checkbox will be triggered even if label is triggered. -->
-        <div class="content">
-          <!-- note: basis may not work without wrap -->
-          <p>My name is Sohan Emon</p>
-        </div>
-      </li>
-      <li class="bg-sky-500 item">
-        <!-- wrap is important here -->
-        <input type="checkbox" id="faq2" class="appearance-none peer" />
-        <i class="inline fa-solid fa-chevron-right peer-checked:hidden"></i>
-        <i class="hidden fa-solid fa-chevron-down peer-checked:inline"></i>
-        <label for="faq2" class="py-4 cursor-pointer grow">
-          <!-- note: grow is used to fill all remaining space of the article -->
-          <p>What do you do?</p></label
-        >
-        <!-- note: checkbox will be triggered even if label is triggered. -->
-        <div class="content">
-          <!-- note: basis may not work without wrap -->
-          <p>I'm a fullstack web developer.</p>
-        </div>
-      </li>
-      <li class="bg-blue-500 item">
-        <!-- wrap is important here -->
-        <input type="checkbox" id="faq3" class="appearance-none peer" />
-        <i class="inline fa-solid fa-chevron-right peer-checked:hidden"></i>
-        <i class="hidden fa-solid fa-chevron-down peer-checked:inline"></i>
-        <label for="faq3" class="py-4 cursor-pointer grow">
-          <!-- note: grow is used to fill all remaining space of the article -->
-          <p>What is your favorite stack?</p></label
-        >
-        <!-- note: checkbox will be triggered even if label is triggered. -->
-        <div class="content">
-          <!-- note: basis may not work without wrap -->
-          <p>Next, Tailwind CSS, Node, MongoDB</p>
-        </div>
-      </li>
-      <li class="bg-cyan-600 item">
-        <!-- wrap is important here -->
-        <input type="checkbox" id="faq4" class="appearance-none peer" />
-        <i class="inline fa-solid fa-chevron-right peer-checked:hidden"></i>
-        <i class="hidden fa-solid fa-chevron-down peer-checked:inline"></i>
-        <label for="faq4" class="py-4 cursor-pointer grow">
-          <!-- note: grow is used to fill all remaining space of the article -->
-          <p>Do you have a portfolio?</p></label
-        >
-        <!-- note: checkbox will be triggered even if label is triggered. -->
-        <div class="content">
-          <!-- note: basis may not work without wrap -->
-          <p>
-            Go,
-            <a
-              class="text-blue-100 hover:underline underline-offset-2"
-              target="_blank"
-              href="#"
-              >there</a
+
+  <body class="relative antialiased font-inter">
+    <main
+      class="relative flex flex-col justify-center min-h-screen overflow-hidden bg-slate-50"
+    >
+      <div class="w-full max-w-2xl px-4 py-24 mx-auto md:px-6">
+        <h1 class="mb-4 text-2xl font-bold text-slate-900">FAQs</h1>
+
+        <!-- Accordion component -->
+        <div class="divide-y divide-slate-200">
+          <!-- Accordion item -->
+          <div x-data="{ expanded: false }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-01"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-01"
+              >
+                <span>What are the advantages of your service?</span>
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-01"
+              role="region"
+              aria-labelledby="faqs-title-01"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
-          </p>
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion item -->
+          <div x-data="{ expanded: false }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-02"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-02"
+              >
+                <span
+                  >Are there any fees or commissions in addition to the monthly
+                  subscription?</span
+                >
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-02"
+              role="region"
+              aria-labelledby="faqs-title-02"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+            >
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion item -->
+          <div x-data="{ expanded: false }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-03"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-03"
+              >
+                <span>You really don't charge per user? Why not?</span>
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-03"
+              role="region"
+              aria-labelledby="faqs-title-03"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+            >
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion item -->
+          <div x-data="{ expanded: true }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-04"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-04"
+              >
+                <span
+                  >What happens when I go over my monthly active limit?</span
+                >
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-04"
+              role="region"
+              aria-labelledby="faqs-title-04"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+            >
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion item -->
+          <div x-data="{ expanded: false }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-05"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-05"
+              >
+                <span
+                  >Can your service help me understand how to work with my
+                  product?</span
+                >
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-05"
+              role="region"
+              aria-labelledby="faqs-title-05"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+            >
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion item -->
+          <div x-data="{ expanded: false }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-06"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-06"
+              >
+                <span
+                  >Which third-party application do you integrate with?</span
+                >
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-06"
+              role="region"
+              aria-labelledby="faqs-title-06"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+            >
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion item -->
+          <div x-data="{ expanded: false }" class="py-2">
+            <h2>
+              <button
+                id="faqs-title-07"
+                type="button"
+                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+                aria-controls="faqs-text-07"
+              >
+                <span>I have another question!</span>
+                <svg
+                  class="ml-8 fill-indigo-500 shrink-0"
+                  width="16"
+                  height="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                  <rect
+                    y="7"
+                    width="16"
+                    height="2"
+                    rx="1"
+                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    :class="{'!rotate-180': expanded}"
+                  />
+                </svg>
+              </button>
+            </h2>
+            <div
+              id="faqs-text-07"
+              role="region"
+              aria-labelledby="faqs-title-07"
+              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+            >
+              <div class="overflow-hidden">
+                <p class="pb-3">
+                  If you go over your organisations or user limit, a member of
+                  the team will reach out about bespoke pricing. In the
+                  meantime, our collaborative features won't appear in accounts
+                  or users that are over the 100-account or 1,000-user limit.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </li>
-    </ul>
+        <!-- End: Accordion component -->
+      </div>
+    </main>
+
+    <!-- Page footer -->
+    <footer
+      class="absolute text-center left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 md:text-left"
+    >
+      <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com"
+        >&copy;Cruip - Tailwind CSS templates</a
+      >
+    </footer>
+
+    <!-- Banner with links -->
+    <div
+      class="fixed bottom-0 right-0 z-50 w-full md:bottom-6 md:right-12 md:w-auto"
+      :class="bannerOpen ? '' : 'hidden'"
+      x-data="{ bannerOpen: true }"
+    >
+      <div
+        class="flex justify-between p-3 text-sm shadow bg-slate-800 md:rounded"
+      >
+        <div class="inline-flex text-slate-500">
+          <a
+            class="font-medium hover:underline text-slate-300"
+            href="https://cruip.com/building-a-simple-animated-accordion-component-with-tailwind-css/"
+          >
+            Read Tutorial
+          </a>
+          <span class="italic px-1.5">or</span>
+          <a
+            class="flex items-center font-medium text-indigo-500 hover:underline"
+            href="https://github.com/cruip/cruip-tutorials/blob/main/animated-accordion/index.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Download</span>
+            <svg
+              class="ml-1 fill-indigo-400"
+              xmlns="http://www.w3.org/2000/svg"
+              width="9"
+              height="9"
+            >
+              <path
+                d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z"
+              />
+            </svg>
+          </a>
+        </div>
+        <button
+          class="pl-2 ml-3 border-l text-slate-500 hover:text-slate-400 border-slate-700"
+          @click="bannerOpen = false"
+        >
+          <span class="sr-only">Close</span>
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
+            <path
+              d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 </html>
