@@ -46,21 +46,21 @@
     <main id="faq">
       <div class="my-16 font-sans antialiased section-container">
         <!-- Accordion component -->
-        <div class="divide-y divide-slate-200">
+        <div class="divide-y divide-grayishBlue">
           <!-- Accordion item -->
-          <div x-data="{ expanded: false }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-01"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-01"
               >
-                <span>What are the advantages of your service?</span>
+                <span>What is ClipVortex?</span>
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -78,7 +78,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -88,36 +88,34 @@
               id="faqs-text-01"
               role="region"
               aria-labelledby="faqs-title-01"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  ClipVortex is a versatile clipboard management tool that
+                  allows you to easily store and organize your copied items. It
+                  offers seamless synchronization across all your devices,
+                  providing quick and convenient access to your clipboard
+                  content.
                 </p>
               </div>
             </div>
           </div>
           <!-- Accordion item -->
-          <div x-data="{ expanded: false }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-02"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-02"
               >
-                <span
-                  >Are there any fees or commissions in addition to the monthly
-                  subscription?</span
-                >
+                <span>Is ClipVortex available on multiple platforms?</span>
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +125,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -135,7 +133,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -145,33 +143,35 @@
               id="faqs-text-02"
               role="region"
               aria-labelledby="faqs-title-02"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  Yes, ClipVortex is available on various platforms, including
+                  Mac and iOS devices. This cross-device compatibility ensures
+                  that you can access your clipboard snippets on all your
+                  preferred devices.
                 </p>
               </div>
             </div>
           </div>
           <!-- Accordion item -->
-          <div x-data="{ expanded: false }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-03"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-03"
               >
-                <span>You really don't charge per user? Why not?</span>
+                <span>
+                  How can I organize my copied items with ClipVortex?</span
+                >
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +181,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -189,7 +189,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -199,35 +199,33 @@
               id="faqs-text-03"
               role="region"
               aria-labelledby="faqs-title-03"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  ClipVortex provides a user-friendly interface to help you
+                  categorize and manage your clipboard content effectively. You
+                  can assign tags, categorize items, and add descriptions to
+                  stay organized.
                 </p>
               </div>
             </div>
           </div>
           <!-- Accordion item -->
-          <div x-data="{ expanded: true }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-04"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-04"
               >
-                <span
-                  >What happens when I go over my monthly active limit?</span
-                >
+                <span>Is ClipVortex secure for sensitive information?</span>
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +235,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -245,7 +243,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -255,36 +253,33 @@
               id="faqs-text-04"
               role="region"
               aria-labelledby="faqs-title-04"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  ClipVortex prioritizes security. Your clipboard content is
+                  stored securely in the cloud with robust encryption. It's
+                  recommended to use strong, unique passwords for additional
+                  security.
                 </p>
               </div>
             </div>
           </div>
           <!-- Accordion item -->
-          <div x-data="{ expanded: false }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-05"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-05"
               >
-                <span
-                  >Can your service help me understand how to work with my
-                  product?</span
-                >
+                <span>Can I access my clipboard content offline?</span>
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +289,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -302,7 +297,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -312,35 +307,32 @@
               id="faqs-text-05"
               role="region"
               aria-labelledby="faqs-title-05"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  While ClipVortex primarily relies on cloud synchronization,
+                  you can access your clipboard content offline as well. The
+                  changes will be updated across devices once you're online.
                 </p>
               </div>
             </div>
           </div>
           <!-- Accordion item -->
-          <div x-data="{ expanded: false }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-06"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-06"
               >
-                <span
-                  >Which third-party application do you integrate with?</span
-                >
+                <span> Is ClipVortex free to use?</span>
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -350,7 +342,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -358,7 +350,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -368,33 +360,32 @@
               id="faqs-text-06"
               role="region"
               aria-labelledby="faqs-title-06"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  ClipVortex offers a free trial for users to experience its
+                  features. After the trial period, there is a subscription fee
+                  to continue using the service.
                 </p>
               </div>
             </div>
           </div>
           <!-- Accordion item -->
-          <div x-data="{ expanded: false }" class="py-2">
+          <div x-data="{ expanded: false }" class="py-4">
             <h2>
               <button
                 id="faqs-title-07"
                 type="button"
-                class="flex items-center justify-between w-full py-2 font-semibold text-left"
+                class="faq-title"
                 @click="expanded = !expanded"
                 :aria-expanded="expanded"
                 aria-controls="faqs-text-07"
               >
-                <span>I have another question!</span>
+                <span>How do I get started with ClipVortex?</span>
                 <svg
-                  class="ml-8 fill-indigo-500 shrink-0"
+                  class="faq-svg"
                   width="16"
                   height="16"
                   xmlns="http://www.w3.org/2000/svg"
@@ -404,7 +395,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform"
+                    class="faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                   <rect
@@ -412,7 +403,7 @@
                     width="16"
                     height="2"
                     rx="1"
-                    class="transition duration-200 ease-out origin-center transform rotate-90"
+                    class="rotate-90 faq-rect"
                     :class="{'!rotate-180': expanded}"
                   />
                 </svg>
@@ -422,15 +413,16 @@
               id="faqs-text-07"
               role="region"
               aria-labelledby="faqs-title-07"
-              class="grid overflow-hidden text-sm transition-all duration-300 ease-in-out text-slate-600"
+              class="faq-content"
               :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
             >
               <div class="overflow-hidden">
-                <p class="pb-3">
-                  If you go over your organisations or user limit, a member of
-                  the team will reach out about bespoke pricing. In the
-                  meantime, our collaborative features won't appear in accounts
-                  or users that are over the 100-account or 1,000-user limit.
+                <p class="pb-2 text-left">
+                  To begin using ClipVortex, simply download the app on your
+                  preferred platform, create an account, and start copying
+                  content to your clipboard. Your snippets will automatically
+                  sync across devices, providing a seamless clipboard management
+                  experience.
                 </p>
               </div>
             </div>

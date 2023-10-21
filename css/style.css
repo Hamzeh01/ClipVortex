@@ -599,10 +599,6 @@ h5 {
   margin-bottom: 6rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mb-40 {
   margin-bottom: 10rem;
 }
@@ -627,20 +623,12 @@ h5 {
   display: grid;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-32 {
   width: 8rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
 }
 
 .max-w-6xl {
@@ -699,10 +687,6 @@ h5 {
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .justify-between {
   justify-content: space-between;
 }
@@ -737,9 +721,9 @@ h5 {
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
-.divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+.divide-grayishBlue > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
-  border-color: rgb(226 232 240 / var(--tw-divide-opacity));
+  border-color: hsl(201 11% 66% / var(--tw-divide-opacity));
 }
 
 .overflow-hidden {
@@ -765,11 +749,6 @@ h5 {
   fill: #6366f1;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -780,9 +759,18 @@ h5 {
   padding-bottom: 0.5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .pb-3 {
@@ -816,10 +804,6 @@ h5 {
   line-height: 1.75rem;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .font-semibold {
   font-weight: 600;
 }
@@ -829,29 +813,14 @@ h5 {
   color: hsl(201 11% 66% / var(--tw-text-opacity));
 }
 
-.text-slate-600 {
-  --tw-text-opacity: 1;
-  color: rgb(71 85 105 / var(--tw-text-opacity));
-}
-
-.text-slate-900 {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
-}
-
-.text-strongCyan {
-  --tw-text-opacity: 1;
-  color: hsl(171 66% 44% / var(--tw-text-opacity));
-}
-
 .text-lightBlue {
   --tw-text-opacity: 1;
   color: hsl(233 100% 69% / var(--tw-text-opacity));
 }
 
-.text-darkGrayishBlue {
+.text-slate-600 {
   --tw-text-opacity: 1;
-  color: hsl(210 10% 33% / var(--tw-text-opacity));
+  color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
 .antialiased {
@@ -1007,6 +976,47 @@ h5 {
   overflow: hidden;
 }
 
+.faq-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: hsl(210 10% 33% / var(--tw-text-opacity));
+}
+
+.faq-svg {
+  margin-left: 2rem;
+  flex-shrink: 0;
+  fill: hsl(171, 66%, 44%);
+}
+
+.faq-rect {
+  transform-origin: center;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-content {
+  display: grid;
+  overflow: hidden;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: hsl(201 11% 66% / var(--tw-text-opacity));
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* smooth scrolling with customization */
 
 /* Apply smooth scroll to all anchor links */
@@ -1031,11 +1041,6 @@ body {
 .hover\:text-strongCyan:hover {
   --tw-text-opacity: 1;
   color: hsl(171 66% 44% / var(--tw-text-opacity));
-}
-
-.hover\:text-lightBlue:hover {
-  --tw-text-opacity: 1;
-  color: hsl(233 100% 69% / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -1085,11 +1090,6 @@ body {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:pl-16 {

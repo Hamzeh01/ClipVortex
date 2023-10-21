@@ -45,6 +45,21 @@
   @apply flex flex-col justify-center min-h-screen overflow-hidden;
 }
 
+.faq-title {
+  @apply flex items-center justify-between w-full py-2 font-semibold text-left text-darkGrayishBlue;
+}
+
+.faq-svg {
+  @apply ml-8 fill-strongCyan shrink-0;
+}
+
+.faq-rect {
+  @apply transition duration-200 ease-in-out origin-center transform;
+}
+
+.faq-content {
+  @apply grid overflow-hidden text-sm transition-all duration-200 ease-in-out text-grayishBlue;
+}
 /* smooth scrolling with customization */
 /* Apply smooth scroll to all anchor links */
 html {
