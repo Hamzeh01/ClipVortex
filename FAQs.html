@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ClipVortex | Clipboard Website</title>
+    <title>FAQs | ClipVortex</title>
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Google font -->
@@ -20,10 +20,27 @@
     ></script>
   </head>
 
-  <body class="relative antialiased font-inter">
-    <main
-      class="relative flex flex-col justify-center min-h-screen overflow-hidden bg-slate-50"
-    >
+  <body>
+    <!-- header section -->
+    <section id="header">
+      <div class="pt-8 mb-40 section-container">
+        <img src="images/logo.svg" alt="" class="mx-auto my-16" />
+
+        <h3>FAQs</h3>
+
+        <p class="mb-8 text-2xl section-content">
+          Have questions about ClipVortex? You're not alone! Check out our FAQ
+          section to find answers to common queries. If you don't see your
+          question listed, feel free to
+          <a href="contact.html" class="text-lightBlue hover:text-strongCyan"
+            >contact us</a
+          >
+          for further assistance
+        </p>
+      </div>
+    </section>
+    <!-- header section -->
+    <main class="font-sans antialiased main-container">
       <div class="w-full max-w-2xl px-4 py-24 mx-auto md:px-6">
         <h1 class="mb-4 text-2xl font-bold text-slate-900">FAQs</h1>
 
@@ -421,64 +438,5 @@
         <!-- End: Accordion component -->
       </div>
     </main>
-
-    <!-- Page footer -->
-    <footer
-      class="absolute text-center left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 md:text-left"
-    >
-      <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com"
-        >&copy;Cruip - Tailwind CSS templates</a
-      >
-    </footer>
-
-    <!-- Banner with links -->
-    <div
-      class="fixed bottom-0 right-0 z-50 w-full md:bottom-6 md:right-12 md:w-auto"
-      :class="bannerOpen ? '' : 'hidden'"
-      x-data="{ bannerOpen: true }"
-    >
-      <div
-        class="flex justify-between p-3 text-sm shadow bg-slate-800 md:rounded"
-      >
-        <div class="inline-flex text-slate-500">
-          <a
-            class="font-medium hover:underline text-slate-300"
-            href="https://cruip.com/building-a-simple-animated-accordion-component-with-tailwind-css/"
-          >
-            Read Tutorial
-          </a>
-          <span class="italic px-1.5">or</span>
-          <a
-            class="flex items-center font-medium text-indigo-500 hover:underline"
-            href="https://github.com/cruip/cruip-tutorials/blob/main/animated-accordion/index.html"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>Download</span>
-            <svg
-              class="ml-1 fill-indigo-400"
-              xmlns="http://www.w3.org/2000/svg"
-              width="9"
-              height="9"
-            >
-              <path
-                d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z"
-              />
-            </svg>
-          </a>
-        </div>
-        <button
-          class="pl-2 ml-3 border-l text-slate-500 hover:text-slate-400 border-slate-700"
-          @click="bannerOpen = false"
-        >
-          <span class="sr-only">Close</span>
-          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 16 16">
-            <path
-              d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
   </body>
 </html>
