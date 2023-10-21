@@ -22,8 +22,8 @@
 
   <body>
     <!-- header section -->
-    <section id="header">
-      <div class="pt-8 mb-40 section-container">
+    <header id="header">
+      <div class="pt-8 mb-16 section-container">
         <img src="images/logo.svg" alt="" class="mx-auto my-16" />
 
         <h3>FAQs</h3>
@@ -38,12 +38,13 @@
           for further assistance
         </p>
       </div>
-    </section>
+    </header>
     <!-- header section -->
-    <main class="font-sans antialiased main-container">
-      <div class="w-full max-w-2xl px-4 py-24 mx-auto md:px-6">
-        <h1 class="mb-4 text-2xl font-bold text-slate-900">FAQs</h1>
 
+    <!-- FAQs section -->
+
+    <main id="faq">
+      <div class="my-16 font-sans antialiased section-container">
         <!-- Accordion component -->
         <div class="divide-y divide-slate-200">
           <!-- Accordion item -->
@@ -438,5 +439,73 @@
         <!-- End: Accordion component -->
       </div>
     </main>
+    <!-- FAQs section -->
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-100">
+      <div class="section-container">
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <!-- Image -->
+          <img src="images/logo.svg" alt="img" class="scale-50" />
+          <!-- Container for Menus & Social -->
+          <div
+            class="flex flex-col items-center justify-between flex-1 mb-8 space-y-8 md:flex-row md:mb-0 md:space-y-0 text-grayishBlue"
+          >
+            <!-- Menus -->
+            <div
+              class="flex flex-col space-y-4 md:flex-row md:ml-24 md:space-x-24 md:space-y-0"
+            >
+              <!-- Menu 1 -->
+              <div class="footer-menu">
+                <div>
+                  <a href="FAQs.html" class="hover:text-strongCyan">FAQs</a>
+                </div>
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Contact Us</a>
+                </div>
+              </div>
+              <!-- Menu 2 -->
+              <div class="footer-menu">
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Privacy Policy</a>
+                </div>
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Blog</a>
+                </div>
+              </div>
+              <!-- Menu 3 -->
+              <div class="footer-menu">
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Install Guide</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex justify-between w-32 py-2">
+              <a href="#"
+                ><img
+                  src="images/icon-facebook.svg"
+                  alt="img"
+                  class="duration-200 ficon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/icon-twitter.svg"
+                  alt="img"
+                  class="duration-200 ficon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/icon-instagram.svg"
+                  alt="img"
+                  class="duration-200 ficon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section -->
   </body>
 </html>
