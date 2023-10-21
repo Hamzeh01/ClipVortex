@@ -41,6 +41,10 @@
     brightness(101%) contrast(94%);
 }
 
+.main-container {
+  @apply flex flex-col justify-center min-h-screen overflow-hidden;
+}
+
 /* smooth scrolling with customization */
 /* Apply smooth scroll to all anchor links */
 html {
