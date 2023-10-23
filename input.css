@@ -16,9 +16,13 @@
   .contact-label {
     @apply block mb-2 text-sm font-medium text-darkGrayishBlue;
   }
-  
+
   .contact-input {
     @apply block w-full p-2 text-sm border rounded-lg shadow-sm bg-white border-grayishBlue text-darkGrayishBlue focus:ring focus:ring-grayishBlue focus:border-grayishBlue;
+  }
+
+  .contact-submit {
+    @apply px-5 py-3 text-sm font-medium text-center text-white rounded-lg bg-lightBlue sm:w-fit hover:opacity-80 focus:ring focus:outline-none focus:ring-lightBlue;
   }
 }
 
