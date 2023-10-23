@@ -12,6 +12,16 @@
   }
 }
 
+@layer components {
+  .contact-label {
+    @apply block mb-2 text-sm font-medium text-darkGrayishBlue;
+  }
+  
+  .contact-input {
+    @apply block w-full p-2 text-sm border rounded-lg shadow-sm bg-white border-grayishBlue text-darkGrayishBlue focus:ring focus:ring-grayishBlue focus:border-grayishBlue;
+  }
+}
+
 .section-container {
   @apply max-w-6xl mx-auto text-center px-10;
 }
@@ -60,6 +70,7 @@
 .faq-content {
   @apply grid overflow-hidden text-sm transition-all duration-200 ease-in-out text-grayishBlue;
 }
+
 /* smooth scrolling with customization */
 /* Apply smooth scroll to all anchor links */
 html {
