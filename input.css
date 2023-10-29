@@ -75,6 +75,13 @@
   @apply grid overflow-hidden text-sm transition-all duration-200 ease-in-out text-grayishBlue;
 }
 
+.trend-card {
+  @apply flex flex-col justify-around rounded px-5 py-3 bg-strongCyan;
+}
+
+.trend-link {
+  @apply text-lg font-normal capitalize text-zinc-100 hover:invert;
+}
 /* smooth scrolling with customization */
 /* Apply smooth scroll to all anchor links */
 html {
