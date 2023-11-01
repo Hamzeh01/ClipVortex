@@ -82,6 +82,15 @@
 .trend-link {
   @apply text-lg font-normal capitalize text-zinc-100 hover:invert;
 }
+
+.step-container {
+  @apply p-8 bg-white rounded-lg shadow-md my-8;
+}
+
+.step-text {
+  @apply text-xl font-semibold text-darkGrayishBlue;
+}
+
 /* smooth scrolling with customization */
 /* Apply smooth scroll to all anchor links */
 html {
