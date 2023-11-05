@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | ClipVortex</title>
+    <title>Contact Us | ClipVortex</title>
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Google font -->
@@ -15,202 +15,150 @@
     />
   </head>
   <body>
-    <!-- header section -->
-    <header id="header">
-      <!-- Logo section -->
-      <nav class="flex items-center mx-10 my-6 gap-x-4">
-        <img src="images/logo.svg" alt="" class="w-16 h-16" />
-        <h5>ClipVortex | Your clipboard</h5>
-      </nav>
-      <!-- Logo section -->
-
-      <div class="flex flex-col mx-10 my-24 gap-y-0">
-        <h3 class="capitalize">The blog</h3>
-
-        <p class="text-lg font-normal text-grayishBlue">
-          Read our Latest Blog and learn to manage your clip board.
-        </p>
+    <!-- Header Section -->
+    <header class="px-4 py-7 sm:px-6 lg:px-8">
+      <div
+        class="flex flex-col items-center justify-center max-w-6xl mx-auto sm:flex-row sm:justify-between"
+      >
+        <div class="flex items-center mb-4 sm:mb-0">
+          <img src="images/logo.svg" alt="ClipVortex Logo" class="w-16 h-16" />
+          <h1 class="ml-2 text-xl font-semibold text-gray-900">
+            ClipVortex | Your Clipboard
+          </h1>
+        </div>
+        <div class="flex-col hidden md:flex">
+          <h3 class="text-2xl font-semibold text-darkGrayishBlue">The Blog</h3>
+          <p class="text-base text-grayishBlue">
+            Read our Latest Blog and learn to manage your clipboard.
+          </p>
+        </div>
       </div>
     </header>
-    <!-- header section -->
-    <main id="blog">
-      <section id="recent">
-        <h5 class="m-8">Recently Post</h5>
-        <div class="flex justify-around">
-          <!-- card item -->
+
+    <!-- Main Content -->
+    <main class="max-w-6xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
+      <!-- Recent Posts Section -->
+      <section class="mb-12">
+        <h2 class="mb-4 text-2xl font-semibold text-darkGrayishBlue">
+          Recently Posted
+        </h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <!-- Post Card 1 -->
           <div
-            class="w-[16rem] h-[24rem] bg-grayishBlue rounded-md flex flex-col justify-between items-stretch px-5 py-3 hover:brightness-90 duration-150"
+            class="transition duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
           >
-            <span class="text-base font-normal capitalize text-darkGrayishBlue">
-              O N E
-            </span>
-            <p class="text-2xl font-semibold capitalize text-darkGrayishBlue">
-              Lorem ipsum dolor sit amet.
-            </p>
-            <a
-              href=""
-              class="text-xl font-normal capitalize duration-150 text-darkGrayishBlue hover:text-lightBlue hover:underline hover:underline-offset-4"
-              >Read more</a
-            >
+            <img
+              src="image1.jpg"
+              alt="Post 1 Image"
+              class="object-cover w-full h-48"
+            />
+            <div class="p-4">
+              <span class="text-sm font-normal text-grayishBlue">One</span>
+              <h3 class="text-lg font-semibold text-darkGrayishBlue">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <a
+                href="#"
+                class="inline-block mt-2 text-base font-normal text-lightBlue hover:underline"
+                >Read more</a
+              >
+            </div>
           </div>
-          <!-- card item -->
-          <!-- card item -->
+          <!-- Post Card 2 -->
           <div
-            class="w-[16rem] h-[24rem] bg-stone-300 rounded-md flex flex-col justify-between items-stretch px-5 py-3 hover:brightness-90 duration-150"
+            class="transition duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
           >
-            <span class="text-base font-normal capitalize text-darkGrayishBlue">
-              t w e
-            </span>
-            <p class="text-2xl font-semibold capitalize text-darkGrayishBlue">
-              Lorem ipsum dolor sit amet.
-            </p>
-            <a
-              href=""
-              class="text-xl font-normal capitalize duration-150 text-darkGrayishBlue hover:text-lightBlue hover:underline hover:underline-offset-4"
-              >Read more</a
-            >
+            <img
+              src="image2.jpg"
+              alt="Post 2 Image"
+              class="object-cover w-full h-48"
+            />
+            <div class="p-4">
+              <span class="text-sm font-normal text-grayishBlue">Two</span>
+              <h3 class="text-lg font-semibold text-darkGrayishBlue">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <a
+                href="#"
+                class="inline-block mt-2 text-base font-normal text-lightBlue hover:underline"
+                >Read more</a
+              >
+            </div>
           </div>
-          <!-- card item -->
-          <!-- card item -->
+          <!-- Post Card 3 -->
           <div
-            class="w-[16rem] h-[24rem] bg-grayishBlue rounded-md flex flex-col justify-between items-stretch px-5 py-3 hover:brightness-90 duration-150"
+            class="transition duration-300 bg-white rounded-lg shadow-md hover:shadow-lg"
           >
-            <span class="text-base font-normal capitalize text-darkGrayishBlue">
-              t h r e e
-            </span>
-            <p class="text-2xl font-semibold capitalize text-darkGrayishBlue">
-              Lorem ipsum dolor sit amet.
-            </p>
-            <a
-              href=""
-              class="text-xl font-normal capitalize duration-150 text-darkGrayishBlue hover:text-lightBlue hover:underline hover:underline-offset-4"
-              >Read more</a
-            >
+            <img
+              src="image3.jpg"
+              alt="Post 3 Image"
+              class="object-cover w-full h-48"
+            />
+            <div class="p-4">
+              <span class="text-sm font-normal text-grayishBlue">Three</span>
+              <h3 class="text-lg font-semibold text-darkGrayishBlue">
+                Lorem ipsum dolor sit amet.
+              </h3>
+              <a
+                href="#"
+                class="inline-block mt-2 text-base font-normal text-lightBlue hover:underline"
+                >Read more</a
+              >
+            </div>
           </div>
-          <!-- card item -->
-          <!-- card item -->
-          <div
-            class="w-[16rem] h-[24rem] bg-stone-300 rounded-md flex flex-col justify-between items-stretch px-5 py-3 hover:brightness-90 duration-150"
-          >
-            <span class="text-base font-normal capitalize text-darkGrayishBlue">
-              f o u r
-            </span>
-            <p class="text-2xl font-semibold capitalize text-darkGrayishBlue">
-              Lorem ipsum dolor sit amet.
-            </p>
-            <a
-              href=""
-              class="text-xl font-normal capitalize duration-150 text-darkGrayishBlue hover:text-lightBlue hover:underline hover:underline-offset-4"
-              >Read more</a
-            >
-          </div>
-          <!-- card item -->
-          <!-- card item -->
-          <div
-            class="w-[16rem] h-[24rem] bg-grayishBlue rounded-md flex flex-col justify-between items-stretch px-5 py-3 hover:brightness-90 duration-150"
-          >
-            <span class="text-base font-normal capitalize text-darkGrayishBlue">
-              f i v e
-            </span>
-            <p class="text-2xl font-semibold capitalize text-darkGrayishBlue">
-              Lorem ipsum dolor sit amet.
-            </p>
-            <a
-              href=""
-              class="text-xl font-normal capitalize duration-150 text-darkGrayishBlue hover:text-lightBlue hover:underline hover:underline-offset-4"
-              >Read more</a
-            >
-          </div>
-          <!-- card item -->
         </div>
       </section>
 
-      <section id="trend">
-        <h5 class="mx-8 my-16">Trending Articles</h5>
-        <div class="flex flex-col flex-wrap gap-4 m-8 md:flex-row">
-          <div class="trend-card w-96 h-96 basis-2/4 grow invert">
-            <span class="text-base font-normal text-white capitalize"
-              >Aug-23-2022</span
-            >
-            <h6 class="text-3xl not-italic font-semibold text-white capitalize">
-              Lorem ipsum dolor sit amet.
-            </h6>
-            <p class="text-sm not-italic font-normal text-white capitalize">
+      <!-- Trending Articles Section -->
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold text-darkGrayishBlue">
+          Trending Articles
+        </h2>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Trending Article 1 -->
+          <div class="p-4 text-white rounded-lg shadow-md bg-strongCyan">
+            <span class="text-sm font-normal">Aug-23-2022</span>
+            <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet.</h3>
+            <p class="mt-2 text-sm font-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               tenetur, fugiat blanditiis suscipit tempora cum alias facere
               molestiae ab! Accusamus!
             </p>
-            <a href="" class="trend-link">Read More</a>
+            <a
+              href="#"
+              class="inline-block mt-4 text-base font-normal text-zinc-100 hover:invert"
+              >Read More</a
+            >
           </div>
-          <div class="trend-card w-96 h-96 grow-[4]">
-            <span class="text-base font-normal text-white capitalize"
-              >Aug-23-2022</span
-            >
-            <h6 class="text-3xl not-italic font-semibold text-white capitalize">
-              Lorem ipsum dolor sit amet.
-            </h6>
-            <p class="text-sm not-italic font-normal text-white capitalize">
+          <!-- Trending Article 2 -->
+          <div class="p-4 text-white rounded-lg shadow-md bg-strongCyan">
+            <span class="text-sm font-normal">Aug-23-2022</span>
+            <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet.</h3>
+            <p class="mt-2 text-sm font-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               tenetur, fugiat blanditiis suscipit tempora cum alias facere
               molestiae ab! Accusamus!
             </p>
-            <a href="" class="trend-link">Read More</a>
+            <a
+              href="#"
+              class="inline-block mt-4 text-base font-normal text-zinc-100 hover:invert"
+              >Read More</a
+            >
           </div>
-          <div class="trend-card w-96 h-96 basis-1/3 grow invert">
-            <span class="text-base font-normal text-white capitalize"
-              >Aug-23-2022</span
-            >
-            <h6 class="text-3xl not-italic font-semibold text-white capitalize">
-              Lorem ipsum dolor sit amet.
-            </h6>
-            <p class="text-sm not-italic font-normal text-white capitalize">
+          <!-- Trending Article 3 -->
+          <div class="p-4 text-white rounded-lg shadow-md bg-strongCyan">
+            <span class="text-sm font-normal">Aug-23-2022</span>
+            <h3 class="text-lg font-semibold">Lorem ipsum dolor sit amet.</h3>
+            <p class="mt-2 text-sm font-normal">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
               tenetur, fugiat blanditiis suscipit tempora cum alias facere
               molestiae ab! Accusamus!
             </p>
-            <a href="" class="trend-link">Read More</a>
-          </div>
-          <div class="trend-card w-96 h-96">
-            <span class="text-base font-normal text-white capitalize"
-              >Aug-23-2022</span
+            <a
+              href="#"
+              class="inline-block mt-4 text-base font-normal text-zinc-100 hover:invert"
+              >Read More</a
             >
-            <h6 class="text-3xl not-italic font-semibold text-white capitalize">
-              Lorem ipsum dolor sit amet.
-            </h6>
-            <p class="text-sm not-italic font-normal text-white capitalize">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              tenetur, fugiat blanditiis suscipit tempora cum alias facere
-              molestiae ab! Accusamus!
-            </p>
-            <a href="" class="trend-link">Read More</a>
-          </div>
-          <div class="trend-card w-80 h-96 basis-1/3 grow invert">
-            <span class="text-base font-normal text-white capitalize"
-              >Aug-23-2022</span
-            >
-            <h6 class="text-3xl not-italic font-semibold text-white capitalize">
-              Lorem ipsum dolor sit amet.
-            </h6>
-            <p class="text-sm not-italic font-normal text-white capitalize">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              tenetur, fugiat blanditiis suscipit tempora cum alias facere
-              molestiae ab! Accusamus!
-            </p>
-            <a href="" class="trend-link">Read More</a>
-          </div>
-          <div class="trend-card w-96 h-96 basis-full">
-            <span class="text-base font-normal text-white capitalize"
-              >Aug-23-2022</span
-            >
-            <h6 class="text-3xl not-italic font-semibold text-white capitalize">
-              Lorem ipsum dolor sit amet.
-            </h6>
-            <p class="text-sm not-italic font-normal text-white capitalize">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-              tenetur, fugiat blanditiis suscipit tempora cum alias facere
-              molestiae ab! Accusamus!
-            </p>
-            <a href="" class="trend-link">Read More</a>
           </div>
         </div>
       </section>
