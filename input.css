@@ -8,7 +8,7 @@
   }
 
   h5 {
-    @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
+    @apply my-2 text-2xl font-bold text-darkGrayishBlue;
   }
 }
 
@@ -89,6 +89,10 @@
 
 .step-text {
   @apply text-xl font-semibold text-darkGrayishBlue;
+}
+
+.element-center {
+  @apply flex flex-col items-center justify-between md:flex-row;
 }
 
 /* smooth scrolling with customization */
