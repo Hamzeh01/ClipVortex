@@ -32,7 +32,7 @@ To use this website template, follow these steps:
 
 1. **Clone the Repository**:
 
-   - `git clone https://github.com/YourUsername/clipvortex.git`
+   - `git clone https://github.com/Hamzeh01/clipvortex.git`
    - `cd clipvortex`
 
 2. **Open the Project**:
