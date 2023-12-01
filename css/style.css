@@ -602,7 +602,7 @@ h5 {
 .contact-submit {
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
-  background-color: hsl(233 100% 69% / var(--tw-bg-opacity));
+  background-color: hsl(171 66% 44% / var(--tw-bg-opacity));
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.75rem;
@@ -671,11 +671,6 @@ h5 {
 .my-44 {
   margin-top: 11rem;
   margin-bottom: 11rem;
-}
-
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .mb-12 {

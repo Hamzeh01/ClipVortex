@@ -22,7 +22,7 @@
   }
 
   .contact-submit {
-    @apply px-5 py-3 text-sm font-medium text-center text-white rounded-lg bg-lightBlue sm:w-fit hover:opacity-80 focus:ring focus:outline-none focus:ring-lightBlue;
+    @apply px-5 py-3 text-sm font-medium text-center text-white rounded-lg bg-strongCyan sm:w-fit hover:opacity-80 focus:ring focus:outline-none focus:ring-lightBlue;
   }
 }
 
