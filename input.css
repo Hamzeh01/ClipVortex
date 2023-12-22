@@ -55,6 +55,10 @@
     brightness(101%) contrast(94%);
 }
 
+.read-more {
+  @apply inline-flex items-center justify-center h-10 px-6 py-4 my-4 text-sm font-medium transition-colors border rounded-md border-strongCyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 hover:saturate-200 hover:text-strongCyan;
+}
+
 .main-container {
   @apply flex flex-col justify-center min-h-screen overflow-hidden;
 }
